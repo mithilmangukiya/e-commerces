@@ -9,9 +9,6 @@ router.get("/getallcat", getAllCategory);
 //create Category || POST
 router.post("/createcat", addCategory);
 
-//get single Category || GET
-// router.get("/getonecat/:id", getBlogById);
-
 //Update All Category || PUT
 router.patch("/updatecat/:id", updateCategory);
 
