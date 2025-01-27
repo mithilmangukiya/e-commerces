@@ -3,13 +3,14 @@ const {
   addToWishlist,
   getWishlist,
   removeFromWishlist,
-} = require("../controllers/wishlistController.js");
-const { authenticateToken } = require("../middleware/authMiddleware.js");
+} = require('../controllers/wishlistController.js');
 
 const router = express.Router();
 
-router.post("/add", authenticateToken, addToWishlist);
-router.get("/", authenticateToken, getWishlist);
-router.delete("/remove", authenticateToken, removeFromWishlist);
+router.post("/add", addToWishlist);
+
+router.get("/", getWishlist);
+
+router.delete("/remove", removeFromWishlist);
 
 module.exports = router;
